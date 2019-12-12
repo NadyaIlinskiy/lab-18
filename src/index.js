@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import MadLibs from "./MadLibs.js";
 
 import "./styles.css";
 
 function App() {
+  let mycount = -1;
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <div>
+        <MadLibs className="blue" blah="blah" />
+      </div>
     </div>
   );
 }

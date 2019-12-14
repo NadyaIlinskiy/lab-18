@@ -6,8 +6,8 @@
 
 ### Links and Resources
 
-- [Live app](https://qzuon.csb.app/)
-- [Code Sandbox link](https://codesandbox.io/s/wizardly-lamarr-qzuon)
+- [Live app](ttps://w2jyq.csb.app/)
+- [Code Sandbox link](https://codesandbox.io/s/github/NadyaIlinskiy/lab-18)
 
 ### Modules
 

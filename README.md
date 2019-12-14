@@ -13,6 +13,7 @@
 
 - MadLibs.js
 - index.js
+- styles.css
 - public/index.html
 
 #### Running the app

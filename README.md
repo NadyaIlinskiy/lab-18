@@ -6,6 +6,7 @@
 
 ### Links and Resources
 
+- [Live app](https://qzuon.csb.app/)
 - [Code Sandbox link](https://codesandbox.io/s/wizardly-lamarr-qzuon)
 
 ### Modules
@@ -16,7 +17,7 @@
 
 #### Running the app
 
-- open codedandbox link abopve
+- open codedandbox link above
 
 #### UML
 

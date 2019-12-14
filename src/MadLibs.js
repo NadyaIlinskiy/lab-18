@@ -1,31 +1,112 @@
 import React from "react";
 
-class Counter extends React.Component {
+class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: this.props.count ? this.props.count : 0
+      verb: "",
+      animal: "",
+      number: "",
+      adjective: ""
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleChange(event) {
+    let name = event.target.name;
+    let value = event.target.value;
+    this.setState({ [name]: value });
   }
 
   handleClick(e) {
     console.log("clicked");
-    this.setState({ count: this.state.count + 1 });
+
+    Object.keys(this.state).forEach(
+      function(key) {
+        this.setState({ [key]: "" });
+      }.bind(this)
+    );
   }
 
   render() {
     return (
-      <div>
-        <h1 id="count-header">Your current count is: {this.state.count}</h1>
-        <button
-          className={this.props.className}
-          onClick={this.handleClick.bind(this)}
-        >
-          Add to Count
-        </button>
+      <div className="flex-container">
+        <div>
+          <br />
+          <form>
+            <label>
+              Verb - Past ends in ED
+              <div>
+                <input
+                  type="text"
+                  name="verb"
+                  value={this.state.verb}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </label>
+
+            <label>
+              Animal
+              <div>
+                <input
+                  type="text"
+                  name="animal"
+                  value={this.state.animal}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </label>
+            <label>
+              Number
+              <div>
+                <input
+                  type="text"
+                  name="number"
+                  value={this.state.number}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </label>
+            <label>
+              Adjective
+              <div>
+                <input
+                  type="text"
+                  name="adjective"
+                  value={this.state.adjective}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </label>
+          </form>
+          <button className={this.props.className} onClick={this.handleClick}>
+            Clear
+          </button>
+        </div>
+        <div>
+          <h2>I Can Not Live Anymore: </h2>
+          <p align="left">
+            My life makes no sense. My life has been{" "}
+            <span> {this.state.verb || "..."} </span>by a non-caring{" "}
+            <span> {this.state.animal || "..."}</span>. The{" "}
+            <span> {this.state.animal || "..."}</span> was only
+            <span> {this.state.number || "..."}</span> months old, but it{" "}
+            <span> {this.state.verb || "..."}</span> a
+            <span> {this.state.adjective || "..."} </span>
+            punch.
+          </p>
+          <p>
+            <img
+              alt="dead emoji"
+              src="https://cdn0.iconfinder.com/data/icons/smashicons-emoticons-outline-vol-2-2/44/173_-_Dead_emoticon_emoji_face-512.png"
+            />
+          </p>
+        </div>
       </div>
     );
   }
 }
-
-export default Counter;
+export default Form;

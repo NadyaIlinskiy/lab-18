@@ -13,7 +13,7 @@
 
 - MadLibs.js
 - index.js
-- lpublic/index.html
+- public/index.html
 
 #### Running the app
 

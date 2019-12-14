@@ -1,6 +1,15 @@
 import React from "react";
 
+/**
+ * main MadLibs component
+ * @component MadLibs
+ * @extends {React.Component}
+ */
 class MadLibs extends React.Component {
+  /**
+   * constructor
+   * @param {*} props 
+   */
   constructor(props) {
     super(props);
     this.state = {
@@ -13,13 +22,19 @@ class MadLibs extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
-
+/**
+ * handles event on change state in the input forms
+ * @param {*} event 
+ */
   handleChange(event) {
     let name = event.target.name;
     let value = event.target.value;
     this.setState({ [name]: value });
   }
-
+/**
+ * handles click on Clear button
+ * @param {*} e 
+ */
   handleClick(e) {
     console.log("clicked");
 
@@ -29,7 +44,10 @@ class MadLibs extends React.Component {
       }.bind(this)
     );
   }
-
+/**
+ * render function  
+ * @returns HTML content
+ */
   render() {
     return (
       <div className="flex-container">
